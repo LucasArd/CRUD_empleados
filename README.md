@@ -1,14 +1,15 @@
-# Ejemplo Documentación 
-![Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png)
+# CRUD empleados
+[Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png)
 
 
 ## Integrantes 
-- Matias Quiroz
-- German Scarafilo
-- Giovanni Lucchetta
+- Aranda Lucas
+- Astorino Joaquin
+- Bruzzone Manuel
+
 
 ## Proyecto: Menu.
-![Python](./img/imagen_codigo.jpg)
+![Python](https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1678343815563-CRUD%20Operations%20in%20python.jpg)
 
 
 ## Descripción
@@ -20,26 +21,20 @@ Este programa mustra un ejemplo de como utilizar el menu
 (Breve del programa)
 
 ~~~ Python (lenguaje en el que esta escrito)
-    while True:
-      
-      opcion = int(input("1-Ingresar Datos\n2-Mostrar datos\n3-Salir\n"))
+def mostrar_menu_main() -> int:
 
-      match opcion:
-        case 1:
-          print("ingrese datos: ")
-        case 2:
-          print("mostrando datos...")
-        case 3:
-          print("gracias por usar el programa!!!")
-          break
+    eleccion = (input(f"{'-'*5}Menu de opciones{'-'*5}\n1) Ingresar empleado\n2) Modificar empleado\n3) Eliminar empleado\n4) Mostrar todos\n5) Calcular salario promedio\n6) Buscar empleados por DNI\n7) Ordenar empleados\n8) Salir\n{'-'*5}\nSu eleccion: "))
+
+    return eleccion
+
 ~~~
 
 ## :snake: Link al proyecto
-- [proyecto](https://onlinegdb.com/q3RGvZwgB)
+- [proyecto](https://onlinegdb.com/fcNCi3bCN)
 ## :tv: Link al video del proceso
-- [video](https://youtu.be/EdJixU5IDgQ)
+- [video](-)
 
----
+--
 ### Fuentes
 
 - [Lenguaje Markdown](https://markdown.es/sintaxis-markdown/#linkauto).
