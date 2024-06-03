@@ -13,7 +13,16 @@
 
 
 ## Descripción
-En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
+Iniciandose en un menu de opciones, esta aplicacion permite al usuario crea, ver, modificar y eliminar empleados de una base de datos local.
+
+Desde la opcion 1: Ingresar empleado: Pedirá los datos necesarios y dará de alta a un nuevo empleado, asignando un ID autoincremental.
+Desde la opcion 2: Modificar empleado: Permitirá alterar cualquier dato del empleado excepto su ID. Se usará el ID para identificar al empleado a modificar. Se mostrará un submenú para seleccionar qué datos modificar. Indicando si se realizaron modificaciones o no.
+Desde la opcion 3: Eliminar empleado: Eliminará permanentemente a un empleado de la lista original. Se pedirá el ID del empleado a eliminar. 
+Desde la opcion 4: Mostrar todos: Imprimirá por consola la información de todos los empleados en formato de tabla
+Desde la opcion 5: Calcular salario promedio: Calculará e imprimirá el salario promedio de todos los empleados.
+Desde la opcion 6: Buscar empleado por DNI: Permitir al usuario buscar y mostrar la información de un empleado específico ingresando su DNI.
+Desde la opcion 7: Ordenar empleados: Ofrecer la opción de ordenar y mostrar la lista de empleados por nombre, apellido, o salario de forma ascendente o descendente.
+Desde la opcion 8: Salir: Terminará la ejecución del programa. 
 
 ## Función principal
 Este programa mustra un ejemplo de como utilizar el menu
