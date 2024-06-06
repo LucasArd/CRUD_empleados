@@ -1,5 +1,8 @@
 from Package_Input.Input import *
 from elecciones import *
+import re
+import json
+import csv
 
 def validar_puesto(puesto: str, mensaje_error: str) -> str:
     while True:
@@ -64,3 +67,51 @@ def ordenar_empleados(lista: list[dict]) -> list[dict]:
             print("Error")
     lista_ordenada = sorted(lista, key=lambda x: x[clave], reverse = tipo)
     return lista_ordenada
+
+def parse_csv_empleados(path: str) -> list[dict]:
+    lista = []
+    with open(path, 'r') as archivo:
+        next(archivo)
+        for line in archivo:
+            lectura = re.split(',|\n', line)
+            empleado = {}
+            empleado['ID'] = int(lectura[0])
+            empleado['nombre'] = lectura[1]
+            empleado['apellido'] = lectura[2]
+            empleado['dni'] = int(lectura[3])
+            empleado['puesto'] = lectura[4]
+            empleado['salario'] = float(lectura[5])
+            lista.append(empleado)
+    return lista
+
+def actualizar_empleados(path: str, lista: list[dict]):
+    with open(path, 'w') as archivo:
+        for empleado in lista:
+            linea = f"{empleado['ID']},{empleado['nombre']},{empleado['apellido']},{empleado['dni']},{empleado['puesto']}, {empleado['salario']}\n"
+            archivo.write(linea)
+
+def guardar_eliminado(lista_empleados: list[dict], id: int):
+    with open("Bajas.json", "r") as archivo:
+        bajas = json.load(archivo)
+    for empleado in lista_empleados:
+        if id == empleado["ID"]:
+            with open ("Bajas.json", "w") as archivo:
+                bajas.append(empleado)
+                print(bajas)
+                json.dump(bajas,archivo, indent = 4)
+
+def crear_id(path, lista):
+    try:
+       with open(path, 'r+') as archivo:
+            contenido = archivo.read()
+            numero_id = int(contenido)
+            archivo.seek(0)  
+            archivo.write(str(numero_id + 1))
+
+    except:
+        print('Se genero el archivo id.')
+        numero_id = len(lista) + 1
+        with open(path, 'w') as archivo:
+            archivo.write(str(len(lista) + 1))
+
+    return numero_id

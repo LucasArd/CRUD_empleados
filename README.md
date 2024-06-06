@@ -25,7 +25,25 @@ Desde la opcion 7: Ordenar empleados: Ofrecer la opción de ordenar y mostrar la
 Desde la opcion 8: Salir: Terminará la ejecución del programa. 
 
 ## Función principal
-Este programa mustra un ejemplo de como utilizar el menu
+
+-----Menu de opciones-----
+1) Ingresar empleado
+2) Modificar empleado
+3) Eliminar empleado
+4) Mostrar todos
+5) Calcular salario promedio
+6) Buscar empleados por DNI
+7) Ordenar empleados
+8) Salir
+-----
+Su eleccion: 1
+Ingrese el DNI: 55000000
+Ingrese el nombre: Juan
+Ingrese el apellido: Perez
+Ingrese el puesto: Gerente
+Ingrese el salario: $500000
+Presione una tecla para continuar . . .
+
 
 (Breve del programa)
 

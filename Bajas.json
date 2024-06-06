@@ -1,0 +1,26 @@
+[
+    {
+        "ID": 29,
+        "nombre": "Rosa",
+        "apellido": "Castillo",
+        "dni": 11111112,
+        "puesto": "Gerente",
+        "salario": 72000.0
+    },
+    {
+        "ID": 100,
+        "nombre": "Francisco",
+        "apellido": "Peralta",
+        "dni": 66766789,
+        "puesto": "Encargado",
+        "salario": 77000.0
+    },
+    {
+        "ID": 5,
+        "nombre": "Pedro",
+        "apellido": "Martinez",
+        "dni": 55667788,
+        "puesto": "Encargado",
+        "salario": 45000.0
+    }
+]

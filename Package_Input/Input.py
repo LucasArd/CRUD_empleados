@@ -33,7 +33,7 @@ def get_string(mensaje: str, mensaje_error: str, longitud: int = None) -> str|No
             print("Error. Se esperaba una cadena de texto.")
 
 
-def get_min(mensaje: str, mensaje_error: str, minimo: float = None, reintentos: float = None) -> float|None:
+def get_min(mensaje: str, mensaje_error: str, minimo: float = None, reintentos: int = None) -> float|None:
     while True:
         numero = input(mensaje)
         try:

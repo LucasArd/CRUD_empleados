@@ -1,5 +1,6 @@
 
 from funciones import *
+import json
 
 
 #region Create
@@ -80,6 +81,7 @@ def eliminar_empleado(lista_empleados: list[dict], id: int) -> bool:
                 break
         if eliminar != None:
             lista_empleados.remove(eliminar)
+            print(lista_empleados)
             salida = True
         return salida
     except UnboundLocalError:

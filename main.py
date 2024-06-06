@@ -4,8 +4,7 @@
 from os import system
 from Empleado import *
 
-id = 0
-lista = []
+lista = parse_csv_empleados("Empleados.csv")
 
 bandera_ingreso = False
 bandera_seguir = True
@@ -17,8 +16,8 @@ while bandera_seguir:
     match opcion:
         case "1":
             bandera_ingreso = True
-            if len(lista) < 20:
-                id += 1
+            if len(lista) < 200:
+                id = crear_id('id_lista.txt', lista)
                 ingresar_empleado(lista, id)
             else:
                 print(f"\n{'-'*3}LIMITE DE EMPLEADOS ALCANZADO{'-'*3}\n")
@@ -33,10 +32,12 @@ while bandera_seguir:
                 print(f"\n{'-'*3}Tiene que agregar al menos 1 empleado para operar{'-'*3}\n")
         #------------------------------------------------------------------------------------------------------
         case "3":
-            if bandera_ingreso == True:
-                id = get_int("Ingrese el ID a eliminar: ", "Error")
-                if eliminar_empleado(lista, id):
 
+            if bandera_ingreso == False or True:
+                id = get_int("Ingrese el ID a eliminar: ", "Error")
+                guardar_eliminado(lista, id)
+                if eliminar_empleado(lista, id):
+                    
                     print(f"{'-'*3}Empleado ({id}) eliminado correctamente{'-'*3}")
             else:
                 print(f"\n{'-'*3}Tiene que agregar al menos 1 empleado para operar{'-'*3}\n")
@@ -74,6 +75,7 @@ while bandera_seguir:
                 print(f"\n{'-'*3}Tiene que agregar al menos 1 empleado para operar{'-'*3}\n")
         #------------------------------------------------------------------------------------------------------
         case "8":
+            actualizar_empleados("Empleados.csv", lista)
             bandera_seguir = False
             print(f"\n{'-'*5}Gracias por usar nuestra aplicacion{'-'*5}\n")
         #------------------------------------------------------------------------------------------------------
